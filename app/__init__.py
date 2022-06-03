@@ -55,11 +55,13 @@ class Places:
 
 Hailey = User("Hailey Moon", \
 "./static/img/HaileyPic.png", \
-"about", "education", "work", "hobbies", "places")
+"Hi there! My name is Hailey and I’m from South Korea and Boston, MA. I’m passionate about the intersection of design and computer science, and I’m always looking for opportunities to learn!", \
+"education", "work", "hobbies", "places")
 
 Aria = User("Aria Richardson", \
  "./static/img/AriaPic.png", \
- "about", "education", "work", "hobbies", "places")
+ "Hello! My name is Arianna and I am from Bowie, MD! I enjoy coding and creating digital media. I have skills in both graphic design and video production. Nice to meet you!", \
+ "education", "work", "hobbies", "places")
 
 
 # List of users that will be included in this portfolio
