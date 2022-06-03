@@ -36,16 +36,45 @@
             <img src="./static/img/Profile-Pic.png">
         </div>
         <!-- <h1>{{ title }}</h1> -->
-        <h1>Hailey Moon</h1>
+        {% block name %}
+        <h1>{{name}}</h1>
+        {% endblock %}
     </div>
-
-    <div class="profile">
-        <div id="profile-picture" class="profile-picture">
+     <div class="profile">
+        {% block picture %}   
+        <div class="profile-picture">
             <!-- Replace the src tag to change bottom picture -->
-            <img src="./static/img/Profile-Pic.png">
+            <img src={{picurl}}>
         </div>
-        <!-- <h1>{{ title }}</h1> -->
-        <h1>Aria Richardson</h1>
+        {% endblock %}
+    <div id="About">
+    
+    <h2> About Me</h2>
+        <p>{% block bio %}
+            bio
+            {% endblock %}
+        </p>
     </div>
+   
+        
+        <!-- <h1>{{ title }}</h1> -->
+        
+    </div>
+    <div id="EE">
+    <h2>Education and Experience</h2>
+    {% block EE %}  
+    <ul>
+        <li>ex</li>
+    </ul>
+    {% endblock %}
+
+</div>
+<div id="map">
+    <h2>Where Have I Been?</h2>
+    {% block map %}  
+   <p> map</p>
+    {% endblock %}
+
+</div>
 </body>
 </html>
