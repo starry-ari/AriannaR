@@ -56,8 +56,17 @@
         </div>
         <div class="work">
             <h2>Work Experiences</h2>
-            {{ user.name }} work
-        </div>
+            {% for item in user.work %}
+            <div class="work--item">
+                <h3 class="work--title">{{ item.title }}</h3>
+                <h3 class="work--company">{{ item.company }}</h3>
+                <ul>
+                    {% for bullet in item.description %}
+                        <li class="work--description">{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
         <div class="hobbies">
             <h2>Hobbies</h2>
             {{ user.name }} hobbies
