@@ -50,13 +50,12 @@
             {{ user.about }}
         </div>
         <div class="education">
-            <h2>Education</h2>
+            <img src="../static/img/ee.jpeg" />
             <h3 class="education--school">{{ user.education.school }}</h3>
             <h3 class="education--major">{{ user.education.major }}</h3>
             <p class="education--grad">{{ user.education.grad }}</p>
         </div>
         <div class="work">
-            <h2>Work Experiences</h2>
             {% for item in user.work %}
             <div class="work--item">
                 <h3 class="work--title">{{ item.title }}</h3>
@@ -69,7 +68,7 @@
             </div>
             {% endfor %}
         <div class="places">
-            <h2>Places</h2>
+            <img src="../static/img/map.jpeg" />
             {{ user.name }} places
         </div>
         <br/>
