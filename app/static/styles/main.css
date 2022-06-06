@@ -1,7 +1,12 @@
 p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
 }
-
+h2{
+    font-family: serif;
+    align-self: flex-start;
+    padding: 30px;
+    margin-left: 50px;
+}
 body {
     background-color: #f5f5f9;
     background-size: cover;
@@ -10,11 +15,16 @@ body {
     font-family: "Roboto", serif;
     margin: 0px;
 }
+.cont{
+    display: flex;
+    flex-flow: column nowrap;
+   align-items: center;
+}
 
 .nav-bar {
     width: 100%;
     display: inline-block;
-    background-color: #1C539F;
+    background-color: #092a59;
     font-family: "Roboto", serif;
     font-weight: 700 !important;
     padding-top: 10px;
@@ -25,20 +35,27 @@ body {
     height: 60%;
     width: 350px;
 }
+.map {
+    height: 400px;
+    width: 100%;
+  }
+  
 
 .nav-content .nav-logo {
     height: 60px;
-    margin: auto;
+    
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    padding-left: 30px;
 }
 
 .nav-logo img {
-    width: 200px;
+    width: 150px;
+    
 }
 
 .nav-content nav {
@@ -50,16 +67,39 @@ body {
 }
 
 .profile {
+    display: grid;
+    grid-template-columns: 1fr 4fr 3fr 1fr;
+    grid-template-rows: 150px 200px;
+    grid-template-areas: 
+    '. . . .'
+    '. pic title .';
     background-color: #1d539f !important;
     text-align: center;
-    height: 320px;
+    height: 400px;
     margin-bottom: 50px;
 }
+.titles {
+   
+background-image: url('../img/ee.jpg');
+background-repeat: no-repeat;
+ width: 100%;
+}
 
+.titles h2{
+    color: white;
+    text-align: center;
+    font-size: 35pt;
+}
+#t2{
+    background-image: url('../img/map.jpg');
+    
+}
 .profile h1 {
-        font-size: 50px;
+        font-size: 30px;
         font-weight: 700;
         color: white;
+        grid-area: title;
+        align-self: flex-end;
 }
 
 .profile img {
@@ -70,11 +110,15 @@ body {
         margin-right: auto;
         display: block;        
         padding: 20px;
+        
 }
 
 .profile .profile-picture {
     margin-bottom: 30px;
     height: 200px;
+    grid-area: pic;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 .banner {

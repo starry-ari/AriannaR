@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
 
+
 load_dotenv()
 app = Flask(__name__)
 
@@ -55,4 +56,4 @@ class Places:
 
 # We create two instances of User class, Hailey and Aria. Right now we only have placeholder strings for the attributes, though.
 Hailey = User("Hailey Moon", "pic", "about", "education", "work", "hobbies", "places")
-Aria = User("Aria Richardson", "pic", "about", "education", "work", "hobbies", "places")
+Aria = User("Arianna Richardson", "pic", "about", "education", "work", "hobbies", "places")
