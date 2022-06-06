@@ -44,7 +44,7 @@ class Work:
         self.description = description
 
 # Hobbies class is composed of hobby (hobby name), description of the hobby, and img (source to the image)
-class Hobby:
+class Hobbies:
     def __init__(self, hobby, img):
         self.hobby = hobby
         self.img = img
