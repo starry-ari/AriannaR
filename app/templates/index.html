@@ -43,21 +43,32 @@
 
     <!-- Now we will have separate portfolios for each person -->
     {% for user in users %}
+        <h1>{{ user.name }}</h1>
         <div class="about">
-            {{ user.name }} about
+            <h2>About</h2>
+            {{ user.about }}
         </div>
+        <br/>
         <div class="education">
+            <h2>Education</h2>
             {{ user.name }} education
         </div>
+        <br/>
         <div class="work">
+            <h2>Work Experiences</h2>
             {{ user.name }} work
         </div>
+        <br/>
         <div class="hobbies">
+            <h2>Hobbies</h2>
             {{ user.name }} hobbies
         </div>
+        <br/>
         <div class="places">
+            <h2>Places</h2>
             {{ user.name }} places
         </div>
+        <br/>
         <br/>
     {% endfor %}
 </body>
