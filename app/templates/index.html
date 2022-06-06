@@ -30,11 +30,35 @@
         </div>
     </header>
 
+    {% for user in users %}
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
+            <!-- <img src="./static/img/logo.jpg"> -->
+                <img src={{ user.pic }}>
         </div>
-        <h1>{{ title }}</h1>
+        <!-- <h1>{{ title }}</h1> -->
+        <h1>{{ user.name }}</h1>
     </div>
+    {% endfor %}
+
+    <!-- Now we will have separate portfolios for each person -->
+    {% for user in users %}
+        <div class="about">
+            {{ user.name }} about
+        </div>
+        <div class="education">
+            {{ user.name }} education
+        </div>
+        <div class="work">
+            {{ user.name }} work
+        </div>
+        <div class="hobbies">
+            {{ user.name }} hobbies
+        </div>
+        <div class="places">
+            {{ user.name }} places
+        </div>
+        <br/>
+    {% endfor %}
 </body>
 </html>

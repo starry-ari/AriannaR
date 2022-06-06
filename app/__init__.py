@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), users=users)
 
 # This is the User class that defines everything that will be inputted into the portfolio template
 class User:
@@ -53,6 +53,14 @@ class Places:
 # We've defined all the classes we'll use above, so from here on we'll make instances of the classes to break down a user's data
 # and input it into the Jinja template for it to be formatted
 
-# We create two instances of User class, Hailey and Aria. Right now we only have placeholder strings for the attributes, though.
-Hailey = User("Hailey Moon", "pic", "about", "education", "work", "hobbies", "places")
-Aria = User("Aria Richardson", "pic", "about", "education", "work", "hobbies", "places")
+Hailey = User("Hailey Moon", \
+"./static/img/HaileyPic.png", \
+"about", "education", "work", "hobbies", "places")
+
+Aria = User("Aria Richardson", \
+ "./static/img/AriaPic.png", \
+ "about", "education", "work", "hobbies", "places")
+
+
+# List of users that will be included in this portfolio
+users = [Hailey, Aria]
