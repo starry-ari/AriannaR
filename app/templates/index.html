@@ -33,18 +33,17 @@
     {% for user in users %}
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
-            <!-- Below the link tag brings the viewer to go scroll to the selected user's portfolio -->
-            <a href=#{{ user.name }}>
+            <!-- <img src="./static/img/logo.jpg"> -->
                 <img src={{ user.pic }}>
-            </a>
         </div>
+        <!-- <h1>{{ title }}</h1> -->
         <h1>{{ user.name }}</h1>
     </div>
     {% endfor %}
 
     <!-- Now we will have separate portfolios for each person -->
     {% for user in users %}
-        <h1 id={{ user.name }}>{{ user.name }}</h1>
+        <h1>{{ user.name }}</h1>
         <div class="about">
             <h2>About</h2>
             {{ user.about }}
@@ -68,6 +67,10 @@
                 </ul>
             </div>
             {% endfor %}
+        <div class="hobbies">
+            <h2>Hobbies</h2>
+            {{ user.name }} hobbies
+        </div>
         <div class="places">
             <h2>Places</h2>
             {{ user.name }} places
