@@ -75,14 +75,12 @@ HaileyWork.append(Work("Graphic Design Intern", "BU Spark!", \
     ["Developed creative concepts for merchandise design and marketing graphics that align with Spark! branding guidelines to promote brand awareness", \
     "Coordinated with 2+ other interns and supervisor weekly to brainstorm fresh solutions for current projects and review designs in real-time."]))
 HaileyHobby = []
-<<<<<<< HEAD
-# HaileyHobby.append(Hobby("Rock Climbing"))
 # Rock climbing, tennis, cooking
-=======
+
 HaileyHobby.append(Hobbies("Rock Climbing", "./static/img/RockClimbing.jpg"))
 HaileyHobby.append(Hobbies("Tennis", "./static/img/Tennis.jpg"))
 HaileyHobby.append(Hobbies("Cooking", "./static/img/Cooking.jpg"))
->>>>>>> 7327a4273ef4eeb064d29b0fff7529e9c78b99a0
+
 # Digital Art, singing, baseball
 
 Hailey = User(HaileyName, HaileyPic, HaileyAbout, HaileyEducation, HaileyWork, HaileyHobby, "places")
