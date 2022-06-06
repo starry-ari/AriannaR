@@ -10,14 +10,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), users=users)
 
-@app.route('/haileyHobbies')
-def haileyHobbies():
-    return render_template('haileyHobbies.html', url=os.getenv("URL"), user=Hailey)
-
-@app.route('/ariaHobbies')
-def ariaHobbies():
-    return render_template('ariaHobbies.html', url=os.getenv("URL"), user=Aria)
-
 # This is the User class that defines everything that will be inputted into the portfolio template
 class User:
     def __init__(self, name, pic, about, education, work, hobbies, places):
@@ -75,12 +67,12 @@ HaileyWork.append(Work("Graphic Design Intern", "BU Spark!", \
     ["Developed creative concepts for merchandise design and marketing graphics that align with Spark! branding guidelines to promote brand awareness", \
     "Coordinated with 2+ other interns and supervisor weekly to brainstorm fresh solutions for current projects and review designs in real-time."]))
 HaileyHobby = []
-HaileyHobby.append(Hobbies("Rock Climbing", "./static/img/RockClimbing.jpg"))
-HaileyHobby.append(Hobbies("Tennis", "./static/img/Tennis.jpg"))
-HaileyHobby.append(Hobbies("Cooking", "./static/img/Cooking.jpg"))
+HaileyHobby.append(Hobby("Rock Climbing"))
+# Rock climbing, tennis, cooking
 # Digital Art, singing, baseball
 
-Hailey = User(HaileyName, HaileyPic, HaileyAbout, HaileyEducation, HaileyWork, HaileyHobby, "places")
+Hailey = User(HaileyName, HaileyPic, HaileyAbout, HaileyEducation, HaileyWork, \
+"hobbies", "places")
 
 AriaName = "Aria Richardson"
 AriaPic = "./static/img/AriaPic.png"
@@ -97,12 +89,9 @@ AriaWork.append(Work("Communications Intern", "", \
     ["Assisted in the redesign of my high school website", \
     "Shot and edited photos and videos with Adobe software.", \
     "Created promotional content representing the high school for prospective families and school social media(i.e video production, photos, reported on school current events)."]))
-AriaHobby = []
-AriaHobby.append(Hobbies("Digital Art", "./static/img/DigitalArt.jpg"))
-AriaHobby.append(Hobbies("Singing", "./static/img/Sing.jpg"))
-AriaHobby.append(Hobbies("Baseball", "./static/img/Baseball.jpg"))
 
-Aria = User(AriaName, AriaPic, AriaAbout, AriaEducation, AriaWork, AriaHobby, "places")
+Aria = User(AriaName, AriaPic, AriaAbout, AriaEducation, AriaWork, \
+"hobbies", "places")
 
 
 # List of users that will be included in this portfolio
