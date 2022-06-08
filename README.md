@@ -1,5 +1,3 @@
-Flask Web-app Portfolio Site
-
 ## Introduction
 
 This is a portfolio project from Week 1 of Summer 2022 MLH Fellowship Product Engineering track. It uses Bootstrap components and Jinja to dynamically display the site.
