@@ -58,33 +58,7 @@ class Places:
 
 
 # We've defined all the classes we'll use above, so from here on we'll make instances of the classes to break down a user's data
-# and input it into the Jinja template for it to be formatted
-
-HaileyName = "Hailey Moon"
-HaileyPic = "./static/img/HaileyPic.png"
-HaileyAbout = "Hi there! My name is Hailey and I am from South Korea and Boston, MA. I am passionate about the intersection of design and computer science, and I am always looking for opportunities to learn!"
-HaileyEducation = Education("Boston University", "Expected May 2024", "Computer Science")
-HaileyWork = []
-HaileyWork.append(Work("UI/UX Designer", "Cashmate", \
-    ["Conducted user research, problem validation, solution validation, created customer personas, 10 user stories, and user flows to plan for end-to-end app development and deployment by the end of the semester.", \
-    "Designed typography, assets, low-fidelity, and high-fidelity wireframes using Figma for an IOS mobile application which used Firebase for backend and React Native for frontend."]))
-HaileyWork.append(Work("Design Head", "BostonHacks", \
-    ["Developed 6 unique website designs, 20+ marketing materials, and 9+ social media graphics on Figma by utilizing the theme colors and assets to establish a clear brand identity.", \
-    "Lead a team of 8 designers and initiated communications with 4 other internal team heads to receive tasks, request information, and delegate work to prepare for 2 hybrid hackathons per year."]))
-HaileyWork.append(Work("Graphic Design Intern", "BU Spark!", \
-    ["Developed creative concepts for merchandise design and marketing graphics that align with Spark! branding guidelines to promote brand awareness", \
-    "Coordinated with 2+ other interns and supervisor weekly to brainstorm fresh solutions for current projects and review designs in real-time."]))
-HaileyHobby = []
-# Rock climbing, tennis, cooking
-
-HaileyHobby.append(Hobbies("Rock Climbing", "./static/img/RockClimbing.jpg"))
-HaileyHobby.append(Hobbies("Tennis", "./static/img/Tennis.jpg"))
-HaileyHobby.append(Hobbies("Cooking", "./static/img/Cooking.jpg"))
-
-# Digital Art, singing, baseball
-
-Hailey = User(HaileyName, HaileyPic, HaileyAbout, HaileyEducation, HaileyWork, HaileyHobby, "places")
-
+#
 AriaName = "Aria Richardson"
 AriaPic = "./static/img/AriaPic.png"
 AriaAbout = "Hello! My name is Arianna and I am from Bowie, MD! I enjoy coding and creating digital media. I have skills in both graphic design and video production. Nice to meet you!"
