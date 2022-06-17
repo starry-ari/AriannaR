@@ -83,4 +83,4 @@ Aria = User(AriaName, AriaPic, AriaAbout, AriaEducation, AriaWork, AriaHobby, "p
 
 
 # List of users that will be included in this portfolio
-users = [Hailey, Aria]
+users = [Aria]
