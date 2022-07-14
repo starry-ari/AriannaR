@@ -58,6 +58,7 @@ TimelinePost.select().order_by(TimelinePost.created_at.desc())]
 def timeline():
     return render_template('timeline.html', title="Timeline")
 
+
 # This is the User class that defines everything that will be inputted into the portfolio template
 class User:
     def __init__(self, name, pic, about, education, work, hobbies, places):
