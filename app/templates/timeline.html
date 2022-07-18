@@ -2,36 +2,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Personal Portfolio">
+    <meta property="og:description" content="My Personal Portfolio">
+
+ <title>Timeline</title>
 </head>
-<script>
-    
-    const form = document.getElementById('form');
-     
-     form.addEventListener('submit', function(e) {
-         // Prevent default behavior:
-         e.preventDefault();
-         // Create payload as new FormData object:
-         const payload = new FormData(form);
-         // Post the payload using Fetch:
-         fetch('https://httpbin.org/post', {
-         method: 'POST',
-         body: payload,
-         })
-         .then(res => res.json())
-         .then(data => console.log(data))
-     })
-    </script>
+
 <body>
     <form id="form">
         <input name="name" type="name">
-        <input name="email "type="email">
-        <input name="content "type="content">
-     
-        <button type="submit">Submit</button>
+        <input name="email" type="email">
+        <input name="content" type="content">
+      <button type="submit">Submit</button>
     </form> 
+    <script>
+    
+    const form = document.getElementById('form');
+ 
+ form.addEventListener('submit', function(e) {
+     // Prevent default behavior:
+     // Create payload as new FormData object:
+     const payload = new FormData(form);
+     console.log([... payload]);
+ })
+        </script>
 </body>
 </html>
