@@ -10,11 +10,16 @@ import datetime
 load_dotenv()
 app = Flask(__name__)
 
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
-        user=os.getenv("MYSQL_USER"),
-        password=os.getenv("MYSQL_PASSWORD"),
-        host=os.getenv("MYSQL_HOST"),
-        port=3306
+if os.getenv("TESTING") == "true":
+    print("Running in test mode")
+    mydb = SqliteDatabase('file:memory?mode=memory&cache=shared',
+    uri=True)
+else:
+    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+            user=os.getenv("MYSQL_USER"),
+            password=os.getenv("MYSQL_PASSWORD"),
+            host=os.getenv("MYSQL_HOST"),
+            port=3306
 )
 print(mydb)
 class TimelinePost(Model):
@@ -42,6 +47,7 @@ def post_time_line_post():
     name = request.form['name']
     email = request.form['email']
     content = request.form['content']
+   
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
     return model_to_dict(timeline_post)
@@ -101,7 +107,7 @@ class Places:
 
 # We've defined all the classes we'll use above, so from here on we'll make instances of the classes to break down a user's data
 #
-AriaName = "Aria Richardson"
+AriaName = "Arianna Richardson"
 AriaPic = "./static/img/AriaPic.png"
 AriaAbout = "Hello! My name is Arianna and I am from Bowie, MD! I enjoy coding and creating digital media. I have skills in both graphic design and video production. Nice to meet you!"
 AriaEducation = Education("Rochester Institute of Technology", "Expected May 2024", "New Media Interactive Development")
