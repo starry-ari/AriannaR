@@ -1,17 +1,16 @@
-#!/bin/bash
-                                                                                     .6/site-packages (from -
 
-                                                                                     /site-packages (from -r 
+ #!/bin/bash
+
+
 cd AriannaR
-                                                                                     /site-packages (from -r 
-git fetch && git reset origin/main --hard
-                                                                                     site-packages (from -r r
-source venv/bin/activate
-                                                                                     hon3.6/site-packages (fr
-pip install -r  requirements.txt
-                                                                                     /site-packages (from -r 
-                                                         e-packages (from Werkzeu
 
-                                                                                     packages (from importlib
+git fetch && git reset origin/main --hard
+
+source python3-virtualvenv/bin/activate 
+
+pip install -r requirements.txt
+
+systemctl restart myportfolio
+                                                            packages (from importlib
 
                   
