@@ -12,6 +12,7 @@ load_dotenv()
 app = Flask(__name__)
 
 
+
 if os.getenv("TESTING")=="true":
     print("Running in test mode")
     mydb= SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
@@ -23,6 +24,8 @@ else:
         port=3306
     )
     
+
+
 print(mydb)
 class TimelinePost(Model):
     name = CharField()
@@ -50,6 +53,7 @@ def post_time_linepost():
     name = request.form['name']
     email = request.form['email']
     content = request.form['content']
+
     regex = r'\b[A-Za-z0-9.%+-]+@[A-Za-z0-9.-]+.[A-Z|a-z]{2,}\b'
     if not request.form['name']:
         return "Invalid name", 400
@@ -60,7 +64,7 @@ def post_time_linepost():
     else:
         timeline_post = TimelinePost.create(name=name, email=email, content=content)
         return model_to_dict(timeline_post)
-    
+
 @app.route('/api/timeline_post', methods=['GET'])
 def get_time_line_post():
     return { 
@@ -116,7 +120,7 @@ class Places:
 
 # We've defined all the classes we'll use above, so from here on we'll make instances of the classes to break down a user's data
 #
-AriaName = "Aria Richardson"
+AriaName = "Arianna Richardson"
 AriaPic = "./static/img/AriaPic.png"
 AriaAbout = "Hello! My name is Arianna and I am from Bowie, MD! I enjoy coding and creating digital media. I have skills in both graphic design and video production. Nice to meet you!"
 AriaEducation = Education("Rochester Institute of Technology", "Expected May 2024", "New Media Interactive Development")
