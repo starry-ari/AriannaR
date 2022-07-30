@@ -54,10 +54,10 @@ def post_time_linepost():
     email = request.form['email']
     content = request.form['content']
 
-    regex = r'\b[A-Za-z0-9.%+-]+@[A-Za-z0-9.-]+.[A-Z|a-z]{2,}\b'
+   
     if not request.form['name']:
         return "Invalid name", 400
-    elif not (regex.fullmatch(regex, request.form['email'])):
+    elif "@" not in email or email == "":
         return "Invalid email", 400
     elif not request.form['content']:
         return "Invalid content", 400
