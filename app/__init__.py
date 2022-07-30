@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from playhouse.shortcuts import model_to_dict
 from peewee import *
 import datetime
-import regex as re
+
 
 load_dotenv()
 app = Flask(__name__)
@@ -57,7 +57,7 @@ def post_time_linepost():
     regex = r'\b[A-Za-z0-9.%+-]+@[A-Za-z0-9.-]+.[A-Z|a-z]{2,}\b'
     if not request.form['name']:
         return "Invalid name", 400
-    elif not (re.fullmatch(regex, request.form['email'])):
+    elif not (regex.fullmatch(regex, request.form['email'])):
         return "Invalid email", 400
     elif not request.form['content']:
         return "Invalid content", 400
