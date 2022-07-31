@@ -31,7 +31,7 @@
             </a>
         </div>
     </header>
-    <a href="/timeline"><h2>Timeline</h2></a>
+  
     {% for user in users %}
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
@@ -42,6 +42,7 @@
         </div>
         <h1>{{ user.name }}</h1>
     </div>
+    <a href="/timeline"><h2>Timeline</h2></a>
     {% endfor %}
 
     <!-- Now we will have separate portfolios for each person -->
